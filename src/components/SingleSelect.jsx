@@ -1,9 +1,18 @@
 // import React from 'react'
-
-const SingleSelect = () => {
+import Select from "react-select";
+const SingleSelect = ({ options, value, onChange }) => {
   return (
-    <div>SingleSelect</div>
-  )
-}
+    <div className="text-red-700"> 
 
-export default SingleSelect
+    <Select 
+   
+   options={options}
+   onChange={(e)=> onChange(e.technologies)}
+   value={value ? { label: value, value } : null}
+  //  onChange={(selected) => onChange(selected.value)}
+   />
+   </div>
+  );
+};
+
+export default SingleSelect;
